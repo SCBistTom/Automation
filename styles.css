@@ -1,5 +1,26 @@
 h1 {
-	
+
 	color: red
-		
+}
+
+.navbar-nav .nav-item .nav-link {
+
+	color: aquamarine;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+
+	color: rgb(182, 190, 187);
+
+}
+
+.navbar-brand img {
+
+	width: 40px;
+}
+
+.navbar-toggler {
+
+	background-color: rgb(182, 190, 187);
+
 }
