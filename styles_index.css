@@ -3,6 +3,25 @@ body {
 	background: linear-gradient(90deg, #007bff 0%, #a7adb4 100%, #000000 100%, #4f4f4f 100%);
 }
 
+h1 {
+
+	background-color: rgb(148, 211, 67);
+	color: rgb(42, 3, 150);
+	margin: 20px;
+}
+h2 {
+
+	background-color: rgb(226, 223, 61);
+	color: rgb(42, 3, 150);
+	margin: 20px;
+}
+h3 {
+
+	background-color: rgb(184, 182, 176);
+	color: rgb(42, 3, 150);
+	margin: 20px;
+}
+
 .navbar-light {
 
 	background-color: rgb(155, 155, 155);
