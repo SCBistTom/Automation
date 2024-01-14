@@ -1,6 +1,17 @@
+body {
+
+	background: linear-gradient(90deg, #007bff 0%, #a7adb4 100%, #000000 100%, #4f4f4f 100%);
+}
+
+
 h1 {
 
-	color: red
+	color: rgb(15, 15, 15)
+}
+
+.navbar-light {
+
+	background-color: rgb(155, 155, 155);
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -10,13 +21,8 @@ h1 {
 
 .navbar-nav .nav-item .nav-link.active {
 
-	color: rgb(182, 190, 187);
+	color: rgb(241, 229, 51);
 
-}
-
-.navbar-brand img {
-
-	width: 40px;
 }
 
 .navbar-toggler {
