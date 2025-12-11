@@ -1,0 +1,41 @@
+body {
+
+	background: linear-gradient(90deg, #007bff 0%, #a7adb4 100%, #000000 100%, #4f4f4f 100%);
+}
+
+.navbar-light {
+
+	background-color: rgb(155, 155, 155);
+}
+
+.navbar-nav .nav-item .nav-link {
+
+	color: aquamarine;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+
+	color: rgb(241, 229, 51);
+}
+
+.navbar-toggler {
+
+	background-color: rgb(182, 190, 187);
+}
+
+.h1-1 {
+
+	background-color: rgb(148, 211, 67);
+	color: rgb(42, 3, 150);
+	margin: 20px;
+}
+
+.h1-2 {
+
+	background-color: rgb(197, 199, 64);
+	color: rgb(42, 3, 150);
+	margin: 20px;
+}
+
+
+
