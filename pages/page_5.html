@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>
-  a {
-    display: block;
-    background-color: rgb(223, 220, 53);
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid;
-  }
-</style>
-
-<body>
-  <div id="container">
-    <a id="ref_1" href="" download="">Скачать документ #1</a>
-    <a id="ref_2" href="" download="">Скачать документ #2</a>
-    <a id="ref_3" href="" download="">Скачать документ #3</a>
-    <a id="ref_4" href="" download="">Скачать документ #4</a>
-  </div>
-
-  <button onclick="clickButton()">Мои документы</button>
-
-  <script src="../script/JS_Test.js"></script>
-  <script>
-
-    const str = 'j°¹õ¿§ÏÆ¢ÔíÑÛªlÝÊÒF¯ÉòÌÍÇkÑêØáØpÛË¬u¯«Æ·©ÊÎ¡çÕèÞÜ¥Ûª¨Ü§Ë¨Ð°Òåå£Â¶Ôñv¸©wp ®²¦uѾѺҤàҩҺҵѳңÀe©½²¯ki£²¯°fѿҟқҨҿҨұҹ x·£©­qrº£¤ҊѮҥҰz§±¡¬¦wo ®®¡яғңұ҇ңҍ¥·zi²¢©©qdҍҶҮӋØіңґz§±¥´¦ns¤®¯¡ѠҘңұ҃ӁҜ¥·ziµ¥©¬sdҍҶҮӋØіңґz§±¥±¦rn ®¡µ¡ѦҘҜҗҁҩҳҜ¥·ziµ©ªodғҶҧұҾѼҕґz§±¥±¦nn ®¤²¡ўҘҤҜѺҝұºµnq ²²©kќҠӄҦҺҫѮl¤·±¯wi´ҩҭҁғҡҖѺҝҾҜ¥·zi ± ©¯ndѻҾҠҼҮѷÂҢҠѽҠҵºµnnµ´¬kєҨҾҜÛҺѼҤҖҖѶқªª¸©ws®£µ¦pѴѴҭӐËҽҷѿҘҕz§±¢²¦vt¡®¬¡ћғҢҤҋÊӂҡҽһѾғ ';
-
-    const container = document.getElementById("container");
-
-    const ref_1 = document.getElementById("ref_1");
-    const ref_2 = document.getElementById("ref_2");
-    const ref_3 = document.getElementById("ref_3");
-    const ref_4 = document.getElementById("ref_4");
-
-    container.style.display = 'none';
-
-
-    function clickButton() {
-      const password = prompt('Введите пароль:', '');
-
-      let path = MyClass.DeCoder(password, str).split(/\s+/);
-
-      alert(path);
-
-      ref_1.href = path[0];
-      ref_2.href = path[1];
-      ref_3.href = path[2];
-      ref_4.href = path[3];
-
-      const ul = document.createElement('ul');
-      let items = path[4].split(/[<>]/).filter(Boolean);
-
-      items.forEach((text) => {
-        const li = document.createElement('li'); 
-        li.textContent = text;                   
-        ul.appendChild(li);                      
-      });
-
-      container.appendChild(ul);
-
-      container.style.display = 'block';
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      display: block;
+      background-color: rgb(223, 220, 53);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid;
     }
+  </style>
 
+  <body>
+    <div id="container">
+      <a id="ref_1" href="" download="">Скачать документ #1</a>
+      <a id="ref_2" href="" download="">Скачать документ #2</a>
+      <a id="ref_3" href="" download="">Скачать документ #3</a>
+      <a id="ref_4" href="" download="">Скачать документ #4</a>
+    </div>
 
+    <button onclick="clickButton()">Мои документы</button>
 
+    <script src="../script/JS_Test.js"></script>
+    <script>
+      const str =
+        "j°¹õ¿§ÏÆ¢ÔíÑÛªlÝÊÒF¯ÉòÌÍÇkÑêØáØpÛË¬u¯«Æ·©ÊÎ¡çÕèÞÜ¥Ûª¨Ü§Ë¨Ð°Òåå£Â¶Ôñv¸©wp ®²¦uѾѺҤàҩҺҵѳңÀe©½²¯ki£²¯°fѿҟқҨҿҨұҹ x·£©­qrº£¤ҊѮҥҰz§±¡¬¦wo ®®¡яғңұ҇ңҍ¥·zi²¢©©qdҍҶҮӋØіңґz§±¥´¦ns¤®¯¡ѠҘңұ҃ӁҜ¥·ziµ¥©¬sdҍҶҮӋØіңґz§±¥±¦rn ®¡µ¡ѦҘҜҗҁҩҳҜ¥·ziµ©ªodғҶҧұҾѼҕґz§±¥±¦nn ®¤²¡ўҘҤҜѺҝұºµnq ²²©kќҠӄҦҺҫѮl¤·±¯wi´ҩҭҁғҡҖѺҝҾҜ¥·zi ± ©¯ndѻҾҠҼҮѷÂҢҠѽҠҵºµnnµ´¬kєҨҾҜÛҺѼҤҖҖѶқªª¸©ws®£µ¦pѴѴҭӐËҽҷѿҘҕz§±¢²¦vt¡®¬¡ћғҢҤҋÊӂҡҽһѾғ x·©ªpq·¤ҖѮҤңұҬҶҭҾҹѮl¤¹¯¯qi¡±ҌҶҍÂѸҒѴҥұºµnq¶³¬kьҨӐËғҩѶҝґz§±¢³¦vo¤®±¡юҠҰÁѓқҹҦҬ¢|u± ´¦toґҩӋØѕғҙҜѬ¿vHmk";
 
+      const container = document.getElementById("container");
 
+      const ref_1 = document.getElementById("ref_1");
+      const ref_2 = document.getElementById("ref_2");
+      const ref_3 = document.getElementById("ref_3");
+      const ref_4 = document.getElementById("ref_4");
 
+      container.style.display = "none";
 
-  </script>
-</body>
+      function clickButton() {
+        const password = prompt("Введите пароль:", "");
 
+        let path = MyClass.DeCoder(password, str).split(/\s+/);
+
+        alert(path);
+
+        ref_1.href = path[0];
+        ref_2.href = path[1];
+        ref_3.href = path[2];
+        ref_4.href = path[3];
+
+        const ul = document.createElement("ul");
+        let items = path[4].split(/[<>]/).filter(Boolean);
+
+        items.forEach((text) => {
+          const li = document.createElement("li");
+          li.textContent = text;
+          ul.appendChild(li);
+        });
+
+        container.appendChild(ul);
+
+        container.style.display = "block";
+      }
+    </script>
+  </body>
 </html>
