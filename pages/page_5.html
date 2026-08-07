@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      display: block;
+      background-color: rgb(223, 220, 53);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid;
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <a id="ref_1" href="" download="">Скачать документ #1</a>
+      <a id="ref_2" href="" download="">Скачать документ #2</a>
+      <a id="ref_3" href="" download="">Скачать документ #3</a>
+      <a id="ref_4" href="" download="">Скачать документ #4</a>
+    </div>
+
+    <button onclick="clickButton()">Мои документы</button>
+
+    <script src="../script/JS_Test_2.js"></script>
+    <script>
+      // const str =
+      //  "NJfHPoG/o743ZSf6c19c6Yd8cve2CZN0G145WTxyYfrHbVADRcg52XNIrjJqm/lC5BIrBfENAeWlXszjEgBDwivWmG3lScyg3WFG50B4aMSH6FyUdCRuCUbml5XDvS/gxbKmTPqz+0lNSCYYAnM8IC3F8F/e2712XgTLGEzcOlda9Pq51XvNmLFOwKS9BAQmAfScvaQ62AafblQG86EViEwWM7gPmCur0+m0cfi6Dh2BGFsrs/Qhepk57pzpolxw57PqrZk5ovKUwOkliF92EZSrJ1rbfUh6hbp+LDfqqHcVuYQnhatTO8DAmJl/DdO7MAKyMItFpZAJgfv1tALU72Sz3lfq3PIT1rBYZpbK2XXHKWy2ZkRYC/rf+8mVC3E6j+jtQ2L2bi8svFEAHn+aXndMMh6Crisdq8jmmspGS/6egiZKWMfKQoqfQxu5BJaxdTCzkWMYBOsGNw88+MsY3vAPOyktepw98+70PYzZffVCEnGSGi266oyX5EFbxzD22W8UfbyCK5+cCab2slMeFsTPIe9vKCkxj/7sgEINpz2DqG2i246rJDGnEn/TURjjEAU1nV3BWWxn4qf7VvMtQn30A6HSh/QfIif5WG7mZxjSV0+LOtnYvXFcPOCbMALrHnippvGd39TNyo3QQyN06C2t5GDUmrr+Af8xJagAeCq4Rx/IL8eSaEoLbER1iVBla0PkmTMt1qUrYmJj56eSxy+hj+S0UuH7oKOkZ5i8YlGNeIEHeruD0fXoaWoZ4UYiie8uP5UnHnIxlR3naRQN+bknYINFC19AgL05sM2rKhUd6DgWQ5Vz84P2DWawC5DquEas9uKLivWBTJU8IJ8Api6TXFXuZ5qYExJXR3Q+al4BkF35IeplMZO2gpqQix4ycqbwjulVYCk/8eLmLi7eOI5tsu4FBDv1G5HDcL2uFq/U8m/XYKyBgOQbxnRvB166BI29sIPk37pB2KPL7fMtCc1FQ86V/e6Hf+TF4kAmaecb/V2lGEEYQ/beyrBBkYKWDRKhZxGPybFyCN/lWxqtnptJEMSK7TT68Ut4RE7KLrOc5xgPYwh2MYLHFQiG9BcWmdvftjsldsg/5hOdWaR2UdEpGLKV4XI3";
+
+      const str = "zoG/rdfnicLuz8jJjMvP0YDpid+EzoCGrdfticLPz8n5jMv+0oDxid6qzoC/rdfVicPrz8jAjMv004DQid+azoCOrdfNicLFz8j5jMvM1IH0id6j3J6S14OT1Jq90ZiM156jMDJwXn4pv34uMBFeXH4cMS700YeU3J+m1oOU0Z+m2J+N05m4MDJDXn83v34UMBB7XH4fMS/P0oef3J6914OU05u905i+2ZimMD95UH8pMSGD3pOg1Z6M2Z+5zZ2VzZ6iyH4CMB9fYn8mv343MAx6QYau3J6Y2IO40ZiN0J290Jy7MA1eVX8rMSH0MDZ7YH8gyZCd0JezzZ6S1IOn2YOi04deQn4cMSx6b/F6eH4QMB6I3pK71paN1JqpzZ2mzZ22yH4LMBt6Yn8lv38IMS5xUIe13J6Z1YOk2Zq+0pqj1ZeBMAZ7VX4RMBpBZX4fMBxbUIee3J6m1oOj1J2j0Z+E2ZyDMAZ6VX8rMBtwZX41MBxwUIeu3J6q1YK+05yE0puG2JiCMA9AVX8iMBRbXn4SMB653pKj2Zij1ZuYzZibzZiYyH8wMBtwY34xMBBwUn4gyZCv0Ja4zZuf2YOc0YOa04dATX4VMS1bUH8gMBpAXn4hMBJeUIeX3J6S1oOf0Ju91p6M1ZmjMD5wXX4kMS5DVX83v38oMBB6YX4fMBu53pKR1Z6m0p+UzZajzZmlyH8WMBN5XX4bv38rMBFBYX4UMBpbWn4QyZCs0JekzZm504Oe2YOZ2YZ6cn8oMSxwb/FaYX4eMS9AVX4nyZGy0JifzZaa2YOS1oKi0IZxfX47MS9xYn8fv38SMBpfYX8rMS57UIeU3J+m04OQ0pim0ZuN1p24MDNDUH4PMSx4b/F6YX4fMS5BYn8hMB6i3pKQ2Za905igzZ64zZiZyH47MBN7b/BAd34RMBZbWn4QyZCs0JilzZq+1YOe04Oe1oZ6cH8tMSH+MDlbUH4YMBRAUIet3J+414OR0JyG05eH05q4MD5xXX8Ev343MB5AWH4pMB+n3pKZ2ZeG0JqSzZmhzZ+SyH4bMBNxb/FAd34jMBdeWn4ZyZCh6qSg6qU=";
+      
+      
+        const container = document.getElementById("container");
+
+      const ref_1 = document.getElementById("ref_1");
+      const ref_2 = document.getElementById("ref_2");
+      const ref_3 = document.getElementById("ref_3");
+      const ref_4 = document.getElementById("ref_4");
+
+      container.style.display = "none";
+
+      async function clickButton() {
+        const password = prompt("Введите пароль:", "");
+
+        // const text = await MyClass.decrypt(str, password);
+
+        const text = await MyClass.DeCoder(password, str);
+
+        const path = text.split(/\s+/);
+
+        alert(path);
+
+        ref_1.href = path[0];
+        ref_2.href = path[1];
+        ref_3.href = path[2];
+        ref_4.href = path[3];
+
+        const ul = document.createElement("ul");
+        let items = path[4].split(/[<>]/).filter(Boolean);
+
+        items.forEach((text) => {
+          const li = document.createElement("li");
+          li.textContent = text;
+          ul.appendChild(li);
+        });
+
+        container.appendChild(ul);
+
+        container.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
